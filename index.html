@@ -15,7 +15,7 @@
             align-items: flex-start;
             height: 100vh;
             font-family: 'Roboto', sans-serif;
-            background-color: rgb(109, 109, 122);
+            background-color: rgb(19, 19, 19);
         }
 
         .content {
@@ -27,8 +27,8 @@
         .table {
             display: table;
             justify-content: center;
-            margin: 8px auto;
-            width: 85%;
+            margin: 0;
+            width: 100%;
         }
 
         .table .row {
@@ -36,24 +36,26 @@
         }
 
         .table .row:nth-child(odd) {
-            background-color: rgb(104, 104, 117);
+            background-color: rgb(36, 36, 36);
         }
 
         .table .cell {
             display: table-cell;
-            border: 1px solid rgb(201, 201, 201);
+            border-top: 1px solid rgb(0, 219, 255);
+            border-bottom: 1px solid rgb(0, 219, 255);
             padding: 10px;
             color: rgb(212, 212, 212);
+        }
+
+        .table .row:first-child .cell {
+            border-top: 2px solid rgb(0, 219, 255);
+            border-bottom: 2px solid rgb(0, 219, 255);
         }
 
         .table .cell label {
             font-size: 1em;
             filter: blur(3px);
             transition: all 200ms;
-        }
-
-        .table .cell label:hover {
-            filter: blur(0);
         }
 
         .table .cell .actions {
@@ -76,22 +78,6 @@
             background-color: rgba(143, 0, 0, 0.8);
             border-radius: 4px;
             padding: 2px 5px;
-        }
-
-        .table .row:first-child .cell:first-child {
-            border-top-left-radius: 10px;
-        }
-
-        .table .row:first-child .cell:last-child {
-            border-top-right-radius: 10px;
-        }
-
-        .table .row:last-child .cell:first-child {
-            border-bottom-left-radius: 10px;
-        }
-
-        .table .row:last-child .cell:last-child {
-            border-bottom-right-radius: 10px;
         }
 
         .table .action {
@@ -120,7 +106,7 @@
         }
 
         .sidebar-margin {
-            width: 250px;
+            width: 289px;
             margin: 0;
         }
 
@@ -128,7 +114,7 @@
             position: fixed;
             width: calc(250px - 25px);
             height: 100%;
-            background-color: rgb(49, 48, 61);
+            background-color: rgb(48, 48, 48);
         }
 
         .sidebar .subtitle {
@@ -147,7 +133,7 @@
             text-align: center;
             border: unset;
             color: rgb(212, 212, 212);
-            background: rgb(49, 48, 61);
+            background: rgb(48, 48, 48);
             font-size: 17px;
             transition: all 250ms;
             overflow: hidden;
@@ -155,11 +141,11 @@
         }
 
         .sidebar button:hover {
-            background-color: rgb(39, 38, 49);
+            background-color: rgb(36, 36, 36);
         }
 
         .sidebar .selected-page {
-            background-color: rgb(39, 38, 49);
+            background-color: rgb(36, 36, 36);
         }
 
         .sidebar button i {
@@ -177,23 +163,96 @@
 
 <body>
     <div class="sidebar-margin"></div>
-
     <div class="sidebar">
-        <h2 class="subtitle">Teste</h2>
-        <a href="./licenses"><button><i class="fa-solid fa-key"></i>Teste</button></a>
-        <a href="./users"><button><i class="fa-solid fa-user"></i>Teste</button></a>
-        <a href="./plans"><button><i class="fa-solid fa-layer-group"></i>Teste</button></a>
-        <a href="./sessions"><button><i class="fa-solid fa-clock"></i>Teste</button></a>
-        <a href="./bans"><button><i class="fa-solid fa-ban"></i>Teste</button></a>
-        <a href="./files"><button><i class="fa-solid fa-file"></i>Files</button></a>
-        <a href="./variables"><button><i class="fa-solid fa-puzzle-piece"></i>Teste</button></a>
-        <a href="./offsets"><button><i class="fa-solid fa-code"></i>Teste</button></a>
-        <a href="./webhooks"><button><i class="fa-solid fa-link"></i>Teste</button></a>
-        <a href="./logs"><button><i class="fa-solid fa-newspaper"></i>Teste</button></a>
-        <a href="./settings"><button><i class="fa-solid fa-gear"></i>Teste</button></a>
-        <h2 class="subtitle">Teste</h2>
-        <a href="./reseller"><button><i class="fa-solid fa-briefcase"></i>Teste</button></a>
-        <a href="./account"><button><i class="fa-solid fa-gear"></i>Teste</button></a>
+        <a href="./index.html"><button class="selected-page"><i class="fa-solid fa-cow"></i>Animais</button></a>
+        <a href="./mapa.html"><button><i class="fa-solid fa-map-location-dot"></i>Mapa</button></a>
+    </div>
+
+    <div class="content">
+        <div class="table">
+            <div class="row">
+                <div class="cell">Raça</div>
+                <div class="cell">Numeração</div>
+                <div class="cell">Ação</div>
+            </div>
+            <div class="row">
+                <div class="cell">Nelore</div>
+                <div class="cell">0000</div>
+                <div class="cell">
+                    <button class="action">Info</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">Nelore</div>
+                <div class="cell">0001</div>
+                <div class="cell">
+                    <button class="action">Info</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">Nelore</div>
+                <div class="cell">0002</div>
+                <div class="cell">
+                    <button class="action">Info</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">Nelore</div>
+                <div class="cell">0003</div>
+                <div class="cell">
+                    <button class="action">Info</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">Nelore</div>
+                <div class="cell">0004</div>
+                <div class="cell">
+                    <button class="action">Info</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">Nelore</div>
+                <div class="cell">0005</div>
+                <div class="cell">
+                    <button class="action">Info</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">Nelore</div>
+                <div class="cell">0006</div>
+                <div class="cell">
+                    <button class="action">Info</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">Nelore</div>
+                <div class="cell">0007</div>
+                <div class="cell">
+                    <button class="action">Info</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">Nelore</div>
+                <div class="cell">0008</div>
+                <div class="cell">
+                    <button class="action">Info</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">Nelore</div>
+                <div class="cell">0009</div>
+                <div class="cell">
+                    <button class="action">Info</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">Nelore</div>
+                <div class="cell">0010</div>
+                <div class="cell">
+                    <button class="action">Info</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
