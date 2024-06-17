@@ -1,0 +1,142 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orlando Aid NGO</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+section {
+    background-color: #f7f7f7;
+    padding: 2em;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#cities-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#cities-list li {
+    margin-bottom: 10px;
+}
+
+#cities-list span {
+    font-weight: bold;
+    color: #666;
+}
+
+#donation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#donation-form label {
+    margin-bottom: 10px;
+}
+
+#donation-form input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#donation-form button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#donation-status {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #666;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#donate">Donate Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Support Orlando in Crisis</h1>
+            <p>Orlando has faced its share of challenges, and we need your help to support its citizens in need. Your donation can make a difference in their lives.</p>
+            <button>Learn More</button>
+        </section>
+        <section id="about">
+            <h1>About Orlando Aid NGO</h1>
+            <p>We are a non-profit organization dedicated to providing aid to the people of Orlando. Our mission is to support the community and help them overcome their challenges.</p>
+        </section>
+        <section id="donate">
+            <h1>Donate Now</h1>
+            <p>Your donation will go towards providing essential services and support to the people of Orlando, including:</p>
+            <ul>
+                <li>Food and shelter for those in need</li>
+                <li>Medical aid and healthcare services</li>
+                <li>Education and job training programs</li>
+            </ul>
+            <form id="donation-form">
+                <label for="amount">Enter Amount:</label>
+                <input type="number" id="amount" name="amount" min="1" max="10000">
+                <button type="submit">Donate to Orlando Aid</button>
+            </form>
+            <div id="donation-status"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
